@@ -22,4 +22,10 @@ Route::group(['middleware' => 'auth:api','prefix' => 'v1'], function () {
 Route::group(['prefix' => 'v1'], function () {
     Route::post('login', 'AuthController@login');
     Route::post('registrar', 'UserController@registrar');
+
+    Route::get('funcionarios/list', "FuncionarioController@list");
+    Route::get('funcionarios/show/{id}', "FuncionarioController@show");
+    Route::post('funcionarios/create', "FuncionarioController@create");
+    Route::post('funcionarios/destroy/{id}', "FuncionarioController@destroy");
+    Route::post('funcionarios/update/{id}', "FuncionarioController@update");
 });
