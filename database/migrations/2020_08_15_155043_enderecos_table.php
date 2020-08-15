@@ -14,13 +14,19 @@ class EnderecosTable extends Migration
     public function up()
     {
         Schema::create('enderecos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integerIncrements('id');
             $table->string('endereco');
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');
             $table->string('cep');
+            $table->unsignedInteger('funcionario_id');
             $table->timestamps();
+
+            $table->foreign('funcionario_id')
+                ->references('id')
+                ->on('funcionarios')
+                ->onDelete('cascade');
         });
     }
 
