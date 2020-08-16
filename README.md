@@ -42,24 +42,20 @@ php artisan migrate
 php artisan db:seed
 ```
 
-5 - Execute o comando php artisan serve para iniciar a applicação e acesse a documentação para visualizar os endpoints.
-Faça a autenticação para executar os serviços.
+5 - Execute o comando php artisan serve para iniciar a applicação.
 
 ```shell
 php artisan serve
 ```
 
-http://lacalhost:8000/public/api/v1/doc
+6 - Importe os endpoints no Postman para visualiza los e testa los. Faça a autenticação para executar os serviços.
+
+```shell
+ForPeopleSoftware.postman_collection.json
+```
+
 
 ## Plugins
 JWT Auth - Autenticação com JWT
 
 https://github.com/tymondesigns/jwt-auth
-
-Laravel Cors (Gerênciar CORS)
-
-https://github.com/fruitcake/laravel-cors
-
-Swagger (Documentação da API)
-
-https://github.com/DarkaOnLine/L5-Swagger

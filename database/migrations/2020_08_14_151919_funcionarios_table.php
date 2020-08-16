@@ -14,18 +14,12 @@ class FuncionariosTable extends Migration
     public function up()
     {
         Schema::create('funcionarios', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integerIncrements('id');
             $table->string('nome');
             $table->unsignedInteger('idade');
             $table->string('cargo');
             $table->unsignedDouble('salario', 15, 2 );
-            $table->unsignedInteger('endereco_id');
             $table->timestamps();
-
-            $table->foreign('endereco_id')
-                ->references('id')
-                ->on('enderecos')
-                ->onDelete('cascade');
         });
     }
 

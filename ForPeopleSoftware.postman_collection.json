@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "8ddf95c8-9be0-4e11-8b85-88cfddd01908",
+		"name": "ForPeopleSoftware",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Http://localhost:8000/api/v1/registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@forpeoplesoftware.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Administrador",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/registrar",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Http://localhost:8000/api/v1/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@forpeoplesoftware.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/login",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Http://localhost:8000/api/v1/funcionarios/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1OTc0MjY3MTMsImV4cCI6MTU5NzQzMDMxMywibmJmIjoxNTk3NDI2NzEzLCJqdGkiOiJRd2VMWEZmb3M3blBEcXExIiwic3ViIjoyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.GBpml9TwrOnHB98yYnqSSkjqWGucEnN_L1hDvqfATzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Lucas Augusto",
+							"type": "text"
+						},
+						{
+							"key": "idade",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "cargo",
+							"value": "Analista Financeiro",
+							"type": "text"
+						},
+						{
+							"key": "salario",
+							"value": "5000.00",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "Rua Vereador Gomes",
+							"type": "text"
+						},
+						{
+							"key": "bairro",
+							"value": "Lúcia",
+							"type": "text"
+						},
+						{
+							"key": "cidade",
+							"value": "Nova Lima",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "Minas Gerais",
+							"type": "text"
+						},
+						{
+							"key": "cep",
+							"value": "34040-500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/funcionarios/create",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funcionarios",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Http://localhost:8000/api/v1/funcionarios/update/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1OTc0MjY3MTMsImV4cCI6MTU5NzQzMDMxMywibmJmIjoxNTk3NDI2NzEzLCJqdGkiOiJRd2VMWEZmb3M3blBEcXExIiwic3ViIjoyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.GBpml9TwrOnHB98yYnqSSkjqWGucEnN_L1hDvqfATzY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Lucas Augusto",
+							"type": "text"
+						},
+						{
+							"key": "idade",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "cargo",
+							"value": "Analista Financeiro",
+							"type": "text"
+						},
+						{
+							"key": "salario",
+							"value": "4000.00",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "Rua Vereador Gomes2",
+							"type": "text"
+						},
+						{
+							"key": "bairro",
+							"value": "Lúcia",
+							"type": "text"
+						},
+						{
+							"key": "cidade",
+							"value": "Nova Lima",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "Minas Gerais",
+							"type": "text"
+						},
+						{
+							"key": "cep",
+							"value": "34040-5002",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/funcionarios/update/2",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funcionarios",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Http://localhost:8000/api/v1/funcionarios/destroy/7",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/funcionarios/destroy/7",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funcionarios",
+						"destroy",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Http://localhost:8000/api/v1/funcionarios/listAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1OTc1ODU3NjIsImV4cCI6MTU5NzU4OTM2MiwibmJmIjoxNTk3NTg1NzYyLCJqdGkiOiJOSjY4eGpNS1pUelRtdm82Iiwic3ViIjoyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.FDskO55-IWE2Kg7YAYcElsE3Q_3MVwvFmzjwwUSSGGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/funcionarios/list",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funcionarios",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Http://localhost:8000/api/v1/funcionarios/show/7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1OTc1ODU3NjIsImV4cCI6MTU5NzU4OTM2MiwibmJmIjoxNTk3NTg1NzYyLCJqdGkiOiJOSjY4eGpNS1pUelRtdm82Iiwic3ViIjoyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.FDskO55-IWE2Kg7YAYcElsE3Q_3MVwvFmzjwwUSSGGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "Http://localhost:8000/api/v1/funcionarios/show/7",
+					"protocol": "Http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funcionarios",
+						"show",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "432291ca-d583-4e51-9aa4-23dde8c37588",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2908a3cb-3958-4de9-8b20-2260ea7b16eb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

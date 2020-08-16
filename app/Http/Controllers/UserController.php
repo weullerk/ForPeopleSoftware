@@ -13,7 +13,7 @@ class UserController extends Controller
     {
         $userService = new UserService();
         if (!$userService->registrar($request->all()))
-            throw new ErrorException("Falha ao cadastrar usuário");
+            throw new ErrorException("Falha ao cadastrar usuário!");
 
         return response('Usuário cadastrado com sucesso!', 201);
     }

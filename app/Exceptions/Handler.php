@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -50,6 +51,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof AuthenticationException) {
+            return response()->json([
+                'error' => 'É necessário autenticar para utilizar os serviços!'
+            ], 401);
+        }
+
         return response()->json([
             'error' => $exception->getMessage(),
             'stackTrace' => $exception->getTrace(),
